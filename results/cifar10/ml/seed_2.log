@@ -1,0 +1,47 @@
+[INFO] main.py:40 > Namespace(agem_batch=240, batchsize=16, data_dir=None, dataset='cifar10', dataset_path='./dataset/cifar10', debug=False, distilling=True, eval_period=100, gpu_transform=True, imp_update_period=1, init_model=False, init_opt=False, log_path='results', lr=0.05, lr_length=10, lr_period=10, lr_step=0.95, m=10, memory_epoch=256, memory_size=50, mir_cands=50, mode='ml', model_name='resnet18', n=50, n_tasks=5, n_worker=0, noisy_percent=20, note='ml', num_gpus=1, online_iter=1.0, opt_name='sgd', reg_coef=100, rnd_seed=2, robust_type='PuriDivER', sched_name='cos', temp_batchsize=None, topk=1, transforms=['cutmix', 'autoaug'], use_amp=True, warmup=1, workers_per_gpu=1)
+[INFO] main.py:49 > Set the device (cuda)
+[INFO] main.py:108 > Using train-transforms Compose(
+    Resize(size=(32, 32), interpolation=bilinear, max_size=None, antialias=None)
+    RandomCrop(size=(32, 32), padding=4)
+    RandomHorizontalFlip(p=0.5)
+    AutoAugment(policy=AutoAugmentPolicy.CIFAR10, fill=None)
+    ToTensor()
+    Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+)
+[INFO] main.py:127 > [1] Select a CIL method (ml)
+[INFO] main.py:133 > [2] Incrementally training 5 tasks
+[INFO] main.py:146 > [2-1] Prepare a datalist for the current task
+[INFO] data_loader.py:554 > [Train] Get datalist from cifar10_train_increment50_blurry10_symN20_rand2_task0.json
+[INFO] middle_loss.py:373 > n_correct: 7	n_ambiguous: 1	n_incorrect: 8
+[INFO] middle_loss.py:374 > n_correct: 7	n_high_loss: 9
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 7	n_ambiguous: 9	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 7	n_high_loss: 9
+[INFO] middle_loss.py:373 > n_correct: 11	n_ambiguous: 5	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 11	n_high_loss: 5
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 7	n_ambiguous: 9	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 7	n_high_loss: 9
+[INFO] middle_loss.py:373 > n_correct: 13	n_ambiguous: 3	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 13	n_high_loss: 3
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] middle_loss.py:373 > n_correct: 9	n_ambiguous: 7	n_incorrect: 0
+[INFO] middle_loss.py:374 > n_correct: 9	n_high_loss: 7
+[INFO] er_baseline.py:198 > Train | Sample # 16 | train_loss 0.6605 | train_acc 0.7500 | lr 0.050000 | running_time 0:00:14 | ETA 12:19:23

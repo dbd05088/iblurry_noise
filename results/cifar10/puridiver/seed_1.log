@@ -1,0 +1,49 @@
+[INFO] main.py:47 > Namespace(agem_batch=240, batchsize=16, data_dir=None, dataset='cifar10', dataset_path='./dataset/cifar10', debug=False, distilling=True, eval_period=100, gpu_transform=True, imp_update_period=1, init_model=False, init_opt=False, log_path='results', lr=0.05, lr_length=10, lr_period=10, lr_step=0.95, m=10, memory_epoch=256, memory_size=500, mir_cands=50, mode='puridiver', model_name='resnet18', n=50, n_tasks=5, n_worker=0, noisy_percent=20, note='puridiver', num_gpus=1, online_iter=1.0, opt_name='sgd', reg_coef=100, rnd_seed=1, robust_type='PuriDivER', sched_name='cos', temp_batchsize=None, topk=1, transforms=['cutmix', 'autoaug'], use_amp=True, warm_up=5, workers_per_gpu=1)
+[INFO] main.py:56 > Set the device (cuda)
+[INFO] main.py:117 > Using train-transforms Compose(
+    Resize(size=(32, 32), interpolation=bilinear, max_size=None, antialias=None)
+    RandomCrop(size=(32, 32), padding=4)
+    RandomHorizontalFlip(p=0.5)
+    AutoAugment(policy=AutoAugmentPolicy.CIFAR10, fill=None)
+    ToTensor()
+    Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+)
+[INFO] main.py:136 > [1] Select a CIL method (puridiver)
+[INFO] main.py:142 > [2] Incrementally training 5 tasks
+[INFO] main.py:155 > [2-1] Prepare a datalist for the current task
+[INFO] data_loader.py:590 > [Train] Get datalist from cifar10_train_increment50_blurry10_symN20_rand1_task0.json
+[INFO] er_baseline.py:199 > Train | Sample # 16 | train_loss 1.1050 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:00 | ETA 0:21:04
+[INFO] er_baseline.py:199 > Train | Sample # 32 | train_loss 21.7893 | train_acc 0.5000 | lr 0.050000 | running_time 0:00:00 | ETA 0:11:50
+[INFO] er_baseline.py:199 > Train | Sample # 48 | train_loss 1.2478 | train_acc 0.3750 | lr 0.050000 | running_time 0:00:00 | ETA 0:08:57
+[INFO] er_baseline.py:199 > Train | Sample # 64 | train_loss 24.4064 | train_acc 0.2500 | lr 0.050000 | running_time 0:00:00 | ETA 0:07:14
+[INFO] er_baseline.py:199 > Train | Sample # 80 | train_loss 17.2764 | train_acc 0.5000 | lr 0.050000 | running_time 0:00:00 | ETA 0:06:32
+[INFO] er_baseline.py:199 > Train | Sample # 96 | train_loss 2.3680 | train_acc 0.5000 | lr 0.050000 | running_time 0:00:00 | ETA 0:05:49
+[INFO] er_baseline.py:209 > Test | Sample # 100 | test_loss 50430.8613 | test_acc 0.3333 | 
+[INFO] er_baseline.py:199 > Train | Sample # 112 | train_loss 5.7359 | train_acc 0.7500 | lr 0.050000 | running_time 0:00:03 | ETA 0:22:38
+[INFO] er_baseline.py:199 > Train | Sample # 128 | train_loss 5.5949 | train_acc 0.5000 | lr 0.050000 | running_time 0:00:03 | ETA 0:20:18
+[INFO] er_baseline.py:199 > Train | Sample # 144 | train_loss 1.3983 | train_acc 0.5625 | lr 0.050000 | running_time 0:00:03 | ETA 0:18:20
+[INFO] er_baseline.py:199 > Train | Sample # 160 | train_loss 2.3814 | train_acc 0.0625 | lr 0.050000 | running_time 0:00:03 | ETA 0:16:43
+[INFO] er_baseline.py:199 > Train | Sample # 176 | train_loss 4.8954 | train_acc 0.6875 | lr 0.050000 | running_time 0:00:03 | ETA 0:15:31
+[INFO] er_baseline.py:199 > Train | Sample # 192 | train_loss 4.2489 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:03 | ETA 0:14:25
+[INFO] er_baseline.py:209 > Test | Sample # 200 | test_loss 1119.2602 | test_acc 0.1667 | 
+[INFO] er_baseline.py:199 > Train | Sample # 208 | train_loss 15.1625 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:07 | ETA 0:29:56
+[INFO] er_baseline.py:199 > Train | Sample # 224 | train_loss 2.5956 | train_acc 0.3750 | lr 0.050000 | running_time 0:00:07 | ETA 0:27:59
+[INFO] er_baseline.py:199 > Train | Sample # 240 | train_loss 25.0082 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:07 | ETA 0:26:18
+[INFO] er_baseline.py:199 > Train | Sample # 256 | train_loss 3.0375 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:07 | ETA 0:24:46
+[INFO] er_baseline.py:199 > Train | Sample # 272 | train_loss 11.0996 | train_acc 0.5000 | lr 0.050000 | running_time 0:00:07 | ETA 0:23:29
+[INFO] er_baseline.py:199 > Train | Sample # 288 | train_loss 8.6686 | train_acc 0.6250 | lr 0.050000 | running_time 0:00:07 | ETA 0:22:21
+[INFO] er_baseline.py:209 > Test | Sample # 300 | test_loss 580.1823 | test_acc 0.2030 | 
+[INFO] er_baseline.py:199 > Train | Sample # 304 | train_loss 5.7100 | train_acc 0.3125 | lr 0.050000 | running_time 0:00:11 | ETA 0:32:27
+[INFO] er_baseline.py:199 > Train | Sample # 320 | train_loss 8.9258 | train_acc 0.3750 | lr 0.050000 | running_time 0:00:11 | ETA 0:30:55
+[INFO] er_baseline.py:199 > Train | Sample # 336 | train_loss 2.1934 | train_acc 0.3750 | lr 0.050000 | running_time 0:00:12 | ETA 0:29:35
+[INFO] er_baseline.py:199 > Train | Sample # 352 | train_loss 1.6678 | train_acc 0.5000 | lr 0.050000 | running_time 0:00:12 | ETA 0:28:22
+[INFO] er_baseline.py:199 > Train | Sample # 368 | train_loss 9.3502 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:12 | ETA 0:27:15
+[INFO] er_baseline.py:199 > Train | Sample # 384 | train_loss 2.1597 | train_acc 0.6875 | lr 0.050000 | running_time 0:00:12 | ETA 0:26:12
+[INFO] er_baseline.py:199 > Train | Sample # 400 | train_loss 2.4027 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:12 | ETA 0:25:14
+[INFO] er_baseline.py:209 > Test | Sample # 400 | test_loss 20602.7329 | test_acc 0.2135 | 
+[INFO] er_baseline.py:199 > Train | Sample # 416 | train_loss 2.1185 | train_acc 0.3125 | lr 0.050000 | running_time 0:00:16 | ETA 0:33:30
+[INFO] er_baseline.py:199 > Train | Sample # 432 | train_loss 7.4614 | train_acc 0.5625 | lr 0.050000 | running_time 0:00:16 | ETA 0:32:23
+[INFO] er_baseline.py:199 > Train | Sample # 448 | train_loss 4.2327 | train_acc 0.5625 | lr 0.050000 | running_time 0:00:16 | ETA 0:31:17
+[INFO] er_baseline.py:199 > Train | Sample # 464 | train_loss 3.7067 | train_acc 0.4375 | lr 0.050000 | running_time 0:00:17 | ETA 0:30:18
+[INFO] er_baseline.py:199 > Train | Sample # 480 | train_loss 2.8468 | train_acc 0.5625 | lr 0.050000 | running_time 0:00:17 | ETA 0:29:20
+[INFO] er_baseline.py:199 > Train | Sample # 496 | train_loss 4.9316 | train_acc 0.3750 | lr 0.050000 | running_time 0:00:17 | ETA 0:28:28

@@ -1,0 +1,14 @@
+[INFO] main.py:47 > Namespace(agem_batch=240, batchsize=16, coeff=0.5, data_dir=None, dataset='cifar10', dataset_path='./dataset/cifar10', debug=False, distilling=True, eval_period=100, gpu_transform=True, imp_update_period=1, init_model=False, init_opt=False, log_path='results', lr=0.05, lr_length=10, lr_period=10, lr_step=0.95, m=10, memory_epoch=256, memory_size=500, mir_cands=50, mode='ml', model_name='resnet18', n=50, n_tasks=5, n_worker=0, noisy_percent=20, note='ml', num_gpus=1, online_iter=1.0, opt_name='sgd', reg_coef=100, rnd_seed=1, robust_type='PuriDivER', sched_name='exp_reset', temp_batchsize=None, topk=1, transforms=['cutmix', 'autoaug'], use_amp=True, warm_up=0, workers_per_gpu=1)
+[INFO] main.py:56 > Set the device (cuda)
+[INFO] main.py:134 > Using train-transforms Compose(
+    RandomCrop(size=(32, 32), padding=4)
+    RandomHorizontalFlip(p=0.5)
+    AutoAugment(policy=AutoAugmentPolicy.CIFAR10, fill=None)
+    ConvertImageDtype()
+    Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+)
+[INFO] main.py:136 > [1] Select a CIL method (ml)
+[INFO] main.py:142 > [2] Incrementally training 5 tasks
+[INFO] main.py:155 > [2-1] Prepare a datalist for the current task
+[INFO] data_loader.py:581 > [Train] Get datalist from cifar10_train_increment50_blurry10_symN20_rand1_task0.json
+[INFO] er_baseline.py:198 > Train | Sample # 1 | train_loss 0.0000 | train_acc 1.0000 | lr 0.050000 | running_time 0:00:00 | ETA 3:01:32
